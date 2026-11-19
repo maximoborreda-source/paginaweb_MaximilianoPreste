@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brazo Robótico · Proceso de armado</title>
+  <meta name="description" content="Seguí paso a paso el armado de un brazo robótico.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="progress" id="progress"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- ============ MENÚ ============ -->
+  <header class="nav">
+    <a href="#inicio" class="logo">ROBO<span>ARM</span></a>
+    <nav>
+      <a href="#video">Video</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <p class="tag">// Proyecto de robótica</p>
+      <h1>Armado de un <em>brazo robótico</em></h1>
+      <p class="lead">Del primer tornillo al primer movimiento. Mirá cómo cobra vida cada pieza, paso a paso.</p>
+      <a href="#proceso" class="btn">Ver el proceso <span>↓</span></a>
+    </div>
+
+    <!-- Brazo robótico dibujado solo con CSS -->
+    <div class="arm-stage" aria-hidden="true">
+      <div class="arm">
+        <div class="arm-base"></div>
+        <div class="seg seg1">
+          <div class="joint"></div>
+          <div class="seg seg2">
+            <div class="joint"></div>
+            <div class="seg seg3">
+              <div class="joint"></div>
+              <div class="claw">
+                <i></i><i></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floor"></div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO ============ -->
+  <section class="section" id="video">
+    <div class="section-head reveal">
+      <span class="num">01</span>
+      <h2>El video del proyecto</h2>
+      <p>Resumen completo del armado y las primeras pruebas.</p>
+    </div>
+
+    <div class="video-frame reveal">
+      <video controls preload="metadata">
+        <source src="imagenes/video_prueba.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO (LÍNEA DE TIEMPO) ============ -->
+  <section class="section" id="proceso">
+    <div class="section-head reveal">
+      <span class="num">02</span>
+      <h2>Paso a paso</h2>
+      <p>Cada etapa del armado, desde la base hasta la pinza.</p>
+    </div>
+
+    <div class="timeline">
+
+      <article class="step reveal">
+        <div class="step-img"><img src="imagenes/arreglos.jpeg" alt="Paso 1" loading="lazy"></div>
+        <div class="step-body">
+          <span class="step-n">PASO 1</span>
+          <h3>Base y estructura</h3>
+          <p>Arreglos del brazo robótico.</p>
+        </div>
+      </article>
+
+      <article class="step reveal">
+        <div class="step-img"><img src="imagenes/arreglos2.jpeg" alt="Paso 2" loading="lazy"></div>
+        <div class="step-body">
+          <span class="step-n">PASO 2</span>
+          <h3>Pruebas y errores</h3>
+          <p>Más pruebas y arreglos al brazo robótico.</p>
+        </div>
+      </article>
+
+      <article class="step reveal">
+        <div class="step-img"><img src="imagenes/cableado.jpeg" alt="Paso 3" loading="lazy"></div>
+        <div class="step-body">
+          <span class="step-n">PASO 3</span>
+          <h3>Arreglo del cableado y pintado de la base</h3>
+          <p>Ordenado del cableado y pintura de la base del brazo.</p>
+        </div>
+      </article>
+
+      <article class="step reveal">
+        <div class="step-img"><img src="imagenes/comprobacion.jpeg" alt="Paso 4" loading="lazy"></div>
+        <div class="step-body">
+          <span class="step-n">PASO 4</span>
+          <h3>Comprobación del brazo</h3>
+          <p>Comprobación de los ángulos del brazo y de sus funciones.</p>
+        </div>
+      </article>
+
+      <!-- PASO 5: lista de componentes -->
+      <article class="step components reveal">
+        <div class="step-body">
+          <span class="step-n">PASO 5</span>
+          <h3>Lista de componentes usados</h3>
+          <p>Todo lo que necesitás para construir y programar el brazo.</p>
+
+          <ul class="parts">
+            <li><span class="ico">🧠</span><div><b>Placa Arduino UNO</b><small>El cerebro del brazo</small></div></li>
+            <li><span class="ico">⚙️</span><div><b>Servomotores DSS-M15</b><small>Cantidad: 4</small></div><em>x4</em></li>
+            <li><span class="ico">🌀</span><div><b>Motor DC</b><small>Movimiento adicional</small></div></li>
+            <li><span class="ico">🔀</span><div><b>Módulo puente H L298N</b><small>Controla el motor DC</small></div></li>
+            <li><span class="ico">🧩</span><div><b>Piezas estructurales</b><small>Base, eslabones y pinza</small></div></li>
+            <li><span class="ico">🔌</span><div><b>Cables jumper</b><small>Conexiones entre los módulos</small></div></li>
+            <li><span class="ico">💾</span><div><b>Cables para cargar el código</b><small>Conexión Arduino ↔ computadora</small></div></li>
+            <li><span class="ico">⚡</span><div><b>Fuente externa 5V · 6A</b><small>Alimenta los servos y el motor DC</small></div></li>
+            <li><span class="ico">💻</span><div><b>Arduino IDE</b><small>Programa con el que cargamos el código</small></div></li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="section" id="galeria">
+    <div class="section-head reveal">
+      <span class="num">03</span>
+      <h2>Galería</h2>
+      <p>Hacé clic en cualquier foto para verla en grande.</p>
+    </div>
+
+    <div class="gallery">
+      <figure class="reveal wide"><img src="imagenes/arreglos.jpeg" alt="Arreglos del brazo" loading="lazy"></figure>
+      <figure class="reveal tall"><img src="imagenes/cableado.jpeg" alt="Cableado y pintado de la base" loading="lazy"></figure>
+      <figure class="reveal"><img src="imagenes/arreglos2.jpeg" alt="Pruebas y arreglos" loading="lazy"></figure>
+      <figure class="reveal"><img src="imagenes/comprobacion.jpeg" alt="Comprobación del brazo" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Hecho con paciencia, tornillos y mucho código · <span>Brazo Robótico</span></p>
+  </footer>
+
+  <!-- Visor de fotos en grande -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" aria-label="Cerrar">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>
